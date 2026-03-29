@@ -90,7 +90,8 @@ function buildAppleMapsUrl(route) {
   return "https://maps.apple.com/?saddr=" + saddr + "&daddr=" + daddr + "&dirflg=d";
 }
 function parseCSV(text) {
-  const lines = text.split(/?
+  const lines = text.split(/
+?
 /).filter(function(l){ return l.trim(); });
   if (lines.length < 2) return { headers:[], rows:[] };
   function parseLine(line) {
